@@ -223,8 +223,8 @@ func truncateMessage(message string) string {
 		maxLength = 0
 	}
 
-	if len(message) > maxLength && maxLength > 0 {
-		return message[:maxLength] + ".."
+	if len(message) > maxLength {
+		return message[:maxLength-2] + ".."
 	}
 	return message
 }
